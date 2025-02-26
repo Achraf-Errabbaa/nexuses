@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "category": "Gaming Computers",
+        "name": "Nexus Ultra Gaming PC",
+        "description": "A high-performance gaming PC with RTX 4090, Intel i9-13900K, and 32GB RAM.",
+        "price": 2999.99,
+        "stock": 5,
+        "image": "pc1"
+    },
+    {
+        "id": 2,
+        "category": "Gaming Computers",
+        "name": "Nexus Elite Gaming PC",
+        "description": "Powerful gaming rig with RTX 4070, Ryzen 7 7800X3D, and 16GB RAM.",
+        "price": 1899.99,
+        "stock": 10,
+        "image": "pc2"
+    },
+    {
+        "id": 3,
+        "category": "Gaming Computers",
+        "name": "Nexus Starter Gaming PC",
+        "description": "A budget-friendly gaming PC with GTX 1660 Super and Ryzen 5 5600.",
+        "price": 799.99,
+        "stock": 15,
+        "image": "pc3"
+    },
+    {
+        "id": 4,
+        "category": "Gaming Laptops",
+        "name": "Nexus Titan Gaming Laptop",
+        "description": "A premium gaming laptop with RTX 4070, Intel i9-13900HX, and 32GB RAM.",
+        "price": 2499.99,
+        "stock": 7,
+        "image": "laptop1"
+    },
+    {
+        "id": 5,
+        "category": "Gaming Laptops",
+        "name": "Nexus Stealth Gaming Laptop",
+        "description": "Slim and powerful with RTX 3070, Ryzen 9 6900HX, and 16GB RAM.",
+        "price": 1799.99,
+        "stock": 12,
+        "image": "laptop2"
+    },
+    {
+        "id": 6,
+        "category": "Gaming Laptops",
+        "name": "Nexus Shadow Gaming Laptop",
+        "description": "A great mid-range gaming laptop with RTX 3060 and Intel i7-12700H.",
+        "price": 1299.99,
+        "stock": 20,
+        "image": "laptop3"
+    },
+    {
+        "id": 7,
+        "category": "Accessories",
+        "name": "Nexus RGB Mechanical Keyboard",
+        "description": "A mechanical keyboard with customizable RGB lighting and fast switches.",
+        "price": 129.99,
+        "stock": 25,
+        "image": "keyboard"
+    },
+    {
+        "id": 8,
+        "category": "Accessories",
+        "name": "Nexus Pro Gaming Mouse",
+        "description": "Ultra-lightweight gaming mouse with adjustable DPI and ergonomic design.",
+        "price": 69.99,
+        "stock": 30,
+        "image": "mouse"
+    },
+    {
+        "id": 9,
+        "category": "Monitor",
+        "name": "Nexus 4K Gaming Monitor",
+        "description": "27-inch 4K gaming monitor with a 144Hz refresh rate and G-Sync.",
+        "price": 499.99,
+        "stock": 15,
+        "image": "monitor"
+    },
+    {
+        "id": 10,
+        "category": "Accessories",
+        "name": "Nexus Wireless Headset",
+        "description": "Surround sound gaming headset with noise cancellation and wireless connectivity.",
+        "price": 149.99,
+        "stock": 20,
+        "image": "headset"
+    }
+]
