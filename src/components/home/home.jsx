@@ -39,20 +39,8 @@ export const Home = () => {
         navigate('/shop', { state: { selectedCategory: category } });
     };
     useEffect(() => {
-        // Initialize Flowbite carousels
-        initFlowbite();
-
-        // Add mutation observer to reinitialize on dynamic changes
-        const observer = new MutationObserver(() => {
-            initFlowbite();
-        });
-
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-
-        return () => observer.disconnect();
+        const timer = setTimeout(() => initFlowbite(), 150);
+        return () => clearTimeout(timer);
     }, []);
     return (
         <div style={{ overflowX: 'hidden' }}> {/* Prevent horizontal scrolling */}
@@ -250,7 +238,7 @@ export const Home = () => {
             </div>
 
             <div className='relative w-full h-[400px] md:h-[600px]'>
-                <img 
+                <img
                     className='w-full h-full object-cover'
                     src={images.whyus}
                     alt="Why choose Nexuses"

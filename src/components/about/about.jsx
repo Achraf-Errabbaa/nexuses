@@ -44,7 +44,7 @@ export const About = () => {
                             </h2>
                             <p className="text-lg md:text-xl leading-relaxed text-gray-300">
                                 At Nexuses, we believe that gaming is more than just entertainment 
-                                it's an experience, a passion, and a way of life. That’s why we provide
+                                it&#39;s an experience, a passion, and a way of life. That’s why we provide
                                 high-performance gaming computers, laptops, and accessories designed to
                                 elevate every moment you spend in the digital world.
                             </p>
