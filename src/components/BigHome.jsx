@@ -6,6 +6,7 @@ import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { Navbar } from './layouts/navbar';
 import { Footer } from './layouts/footer';
+import ScrollToTopButton from './layouts/ScrollToTopButton';
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 
 
@@ -22,6 +23,7 @@ export const BigHome = () => {
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </div>
+                <ScrollToTopButton />
                 <Footer />
             </div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>

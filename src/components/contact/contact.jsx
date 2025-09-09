@@ -59,7 +59,7 @@ export const Contact = () => {
       <motion.div
         variants={formVariants}
         initial="hidden"
-        whileInView="visible"
+        animate="visible"
         viewport={{ once: false }}
         className="text-white py-20 px-6 lg:px-20"
       >
@@ -77,7 +77,7 @@ export const Contact = () => {
                   custom={0}
                   variants={inputVariants}
                   initial="hidden"
-                  whileInView="visible"
+                  animate="visible"
                   viewport={{ once: false }}
                 >
                   <label className="block text-lg mb-2">Name</label>
@@ -95,7 +95,7 @@ export const Contact = () => {
                   custom={1}
                   variants={inputVariants}
                   initial="hidden"
-                  whileInView="visible"
+                  animate="visible"
                   viewport={{ once: false }}
                 >
                   <label className="block text-lg mb-2">Email</label>
@@ -114,7 +114,7 @@ export const Contact = () => {
                 custom={2}
                 variants={inputVariants}
                 initial="hidden"
-                whileInView="visible"
+                animate="visible"
                 viewport={{ once: false }}
               >
                 <label className="block text-lg mb-2">Subject</label>
@@ -137,7 +137,7 @@ export const Contact = () => {
                 custom={3}
                 variants={inputVariants}
                 initial="hidden"
-                whileInView="visible"
+                animate="visible"
                 viewport={{ once: false }}
               >
                 <label className="block text-lg mb-2">Message</label>

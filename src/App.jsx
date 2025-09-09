@@ -4,9 +4,11 @@ import {BigHome} from './components/BigHome';
 
 function App() {
   return (
+    <div className="overflow-x-hidden">
     <Router>
       <BigHome />
     </Router>
+    </div>
   );
 }
 

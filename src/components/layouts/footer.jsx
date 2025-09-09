@@ -75,7 +75,7 @@ Step into the world of Nexuses, where technology meets passion. Your next-level 
                 {/* Copyright & Socials */}
                 <div className="mt-12 flex flex-col items-center justify-between border-t border-gray-700 pt-8 md:flex-row">
                     <span className="text-gray-500">
-                        © {new Date().getFullYear()} <strong className="text-white">TechPulse™</strong>. All Rights Reserved.
+                        © {new Date().getFullYear()} <strong className="text-white">NEXUSES™</strong>. All Rights Reserved to <strong className='text-red-600'>A Guy With A Rocket Lancher </strong>
                     </span>
 
                     <div className="mt-6 flex space-x-6 md:mt-0">

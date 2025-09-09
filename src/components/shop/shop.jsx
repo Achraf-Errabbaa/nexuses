@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import images from '../../constant/images';
 import { ShopFilters } from '../layouts/sidebar';
 import { productImages, products } from '../../constant/data';
@@ -18,11 +18,36 @@ const textVariants = {
 };
 
 export const Shop = () => {
-    const [selectedCategories, setSelectedCategories] = useState([]);
+    const location = useLocation();
+    const locationState = location.state?.selectedCategory;
+
+    const [selectedCategories, setSelectedCategories] = useState(locationState ? [locationState] : []
+    );
     const [searchParams] = useSearchParams();
+    const calculatedMaxPrice = Math.max(...products.map(p => p.price));
+    const [minPrice, setMinPrice] = useState(0);
+    const [maxPrice, setMaxPrice] = useState(calculatedMaxPrice);
     const searchQuery = searchParams.get('search')?.toLowerCase() || '';
 
-    // Add missing handleCategoryChange function
+    useEffect(() => {
+        if (locationState) {
+            setSelectedCategories([locationState]);
+        }
+        else {
+            setSelectedCategories([]);
+        }
+    }, [locationState]);
+
+    const onMaxChange = (newMaxPrice) => {
+        setMaxPrice(newMaxPrice);
+    };
+
+    useEffect(() => {
+        if (maxPrice > calculatedMaxPrice) {
+            onMaxChange(calculatedMaxPrice);
+        }
+    }, [calculatedMaxPrice, maxPrice]);
+
     const handleCategoryChange = (category) => {
         setSelectedCategories(prev =>
             prev.includes(category)
@@ -30,23 +55,35 @@ export const Shop = () => {
                 : [...prev, category]
         );
     };
-    
-    const categoryFilteredProducts = selectedCategories.length > 0
-    ? products.filter(product => selectedCategories.includes(product.category))
-    : products;
 
-// 2. Then apply search filter only if no categories are selected
-const finalProducts = selectedCategories.length > 0
-    ? categoryFilteredProducts
-    : categoryFilteredProducts.filter(product => 
-        product.name.toLowerCase().includes(searchQuery)
-    );
+    // Calculate max price from products only once
+
+    const filteredProducts = useMemo(() => {
+        return products.filter(product => {
+            const categoryMatch = selectedCategories.length === 0 ||
+                selectedCategories.includes(product.category);
+            const searchMatch = selectedCategories.length > 0
+                ? true
+                : product.name.toLowerCase().includes(searchQuery);
+            const priceMatch = product.price >= minPrice &&
+                product.price <= maxPrice &&
+                minPrice < maxPrice;
+
+            return categoryMatch && searchMatch && priceMatch;
+        });
+    }, [selectedCategories, searchQuery, minPrice, maxPrice]);
+
 
     return (
         <div>
             <motion.div className='relative w-full'>
                 <img
-                    className='w-full h-[660px] object-cover'
+                    src="/tiny-blur-shopstart.jpg" // very small blurred image
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover blur-lg scale-110"
+                />
+                <img loading="eager"
+                    className=' w-full h-[660px] object-cover'
                     src={images.shopstart}
                     alt="Gaming setup"
                 />
@@ -68,44 +105,48 @@ const finalProducts = selectedCategories.length > 0
             </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-8 p-6 lg:p-12 bg-[#1a1a1a]">
-                <div className="lg:w-72">
+                <div className="w-72">
                     <ShopFilters
                         selectedCategories={selectedCategories}
                         onCategoryChange={handleCategoryChange}
+                        minPrice={minPrice}
+                        maxPrice={maxPrice}
+                        onMinChange={setMinPrice}
+                        onMaxChange={setMaxPrice}
+                        calculatedMaxPrice={calculatedMaxPrice}
                     />
                 </div>
-
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    {finalProducts.map((product, index) => (
-                        <motion.div
-                            key={product.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            transition={{ delay: index * 0.1 }}
-                            className="bg-[#2d2d2d] rounded-xl p-4"
-                        >
-                            <img
-                                src={productImages[product.image]}
-                                alt={product.name}
-                                className="w-full h-52 object-cover rounded-lg"
-                            />
-                            <h2 className="text-xl font-semibold text-[#fcb505] mt-2">
-                                {product.name}
-                            </h2>
-                            <p className="text-sm text-gray-300 mt-1">
-                                {product.description}
-                            </p>
-                            <div className="flex items-center justify-between mt-4">
-                                <span className="text-xl font-semibold text-[#fcb505]">
-                                    ${product.price.toFixed(2)}
-                                </span>
-                                <button className="px-4 py-2 bg-[#fcb505] text-[#2d2d2d] font-semibold rounded-lg hover:bg-[#fcc529] transition-colors">
-                                    Add to Cart
-                                </button>
+                <div className='overflow-x-hidden'>
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                        {filteredProducts.map((product) => (
+                            <div
+                                key={product.id}
+                                className="bg-[#2d2d2d] rounded-xl p-4"
+                            >
+                                <div className='h-48 flex items-center justify-center'>
+                                    <img loading="lazy"
+                                        src={productImages[product.image]}
+                                        alt={product.name}
+                                        className="w-full h-full object-contain rounded-lg"
+                                    />
+                                </div>
+                                <h2 className="text-xl md:text-xl font-semibold text-[#fcb505] mt-2">
+                                    {product.name}
+                                </h2>
+                                <p className="text-xs md:text-sm text-gray-300 mt-1">
+                                    {product.description}
+                                </p>
+                                <div className="flex items-center justify-between mt-4">
+                                    <span className="text-base md:text-xl font-semibold text-[#fcb505]">
+                                        ${product.price.toFixed(2)}
+                                    </span>
+                                    <button className="px-3 md:px-4 py-2 bg-[#fcb505] text-[#2d2d2d] font-semibold rounded-lg hover:bg-[#fcc529] transition-colors">
+                                        Add to Cart
+                                    </button>
+                                </div>
                             </div>
-                        </motion.div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

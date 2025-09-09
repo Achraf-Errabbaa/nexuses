@@ -33,8 +33,8 @@ export const About = () => {
                         <motion.div
                             variants={sectionVariants}
                             initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, margin: "-100px" }}
+                            animate="visible"
+                            viewport={{ once: true, amount: 0.1 }}
                         >
                             <h1 className="text-4xl md:text-5xl font-bold text-[#fcb505] mb-4">
                                 About Nexuses
@@ -43,7 +43,7 @@ export const About = () => {
                                 Welcome to Nexuses – Powering Your Gaming Experience
                             </h2>
                             <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-                                At Nexuses, we believe that gaming is more than just entertainment –
+                                At Nexuses, we believe that gaming is more than just entertainment 
                                 it's an experience, a passion, and a way of life. That’s why we provide
                                 high-performance gaming computers, laptops, and accessories designed to
                                 elevate every moment you spend in the digital world.
@@ -57,8 +57,8 @@ export const About = () => {
                         transition={{ duration: 0.6, ease: "easeOut" }}
                         className="flex-1"
                     >
-                        <img
-                            className="w-full h-[500px] object-cover rounded-xl shadow-2xl hover:shadow-[#fcb505]/40 transition-shadow duration-300"
+                        <img loading="lazy"
+                            className="w-full h-[500px]  object-cover rounded-xl shadow-2xl hover:shadow-[#fcb505]/40 transition-shadow duration-300"
                             src={images.aboutimage}
                             alt="Gaming setup"
                         />
@@ -71,7 +71,7 @@ export const About = () => {
                 variants={sectionVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-white py-20 px-6 lg:px-20 bg-gradient-to-r from-[#2d2d2d] to-[#1a1a1a] mt-20"
             >
                 <div className="max-w-4xl mx-auto">
@@ -93,7 +93,7 @@ export const About = () => {
                 variants={sectionVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
             >
                 <h1 className="text-4xl font-bold text-[#fcb505] mb-12 text-center">
                     What We Offer
@@ -113,7 +113,7 @@ export const About = () => {
                             variants={listItemVariants}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: false }}
+                            viewport={{ once: true }}
                             className="p-6 bg-[#2d2d2d] rounded-xl shadow-lg hover:bg-[#3d3d3d] transition-colors duration-300"
                         >
                             <span className="text-2xl">{item}</span>
@@ -127,7 +127,7 @@ export const About = () => {
                 variants={sectionVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-white py-20 px-6 lg:px-20 bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d]"
             >
                 <div className="max-w-6xl mx-auto">
@@ -148,7 +148,7 @@ export const About = () => {
                                 variants={listItemVariants}
                                 initial="hidden"
                                 whileInView="visible"
-                                viewport={{ once: false }}
+                                viewport={{ once: true }}
                                 className="p-6 bg-[#2d2d2d] rounded-xl shadow-lg hover:bg-[#3d3d3d] transition-colors duration-300"
                             >
                                 <span className="text-2xl">{item}</span>
@@ -163,7 +163,7 @@ export const About = () => {
                 variants={sectionVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-white py-20 px-6 lg:px-20 bg-gradient-to-r from-[#2d2d2d] to-[#1a1a1a]"
             >
                 <div className="max-w-4xl mx-auto">
@@ -184,7 +184,7 @@ export const About = () => {
                 variants={sectionVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-white py-20 px-6 lg:px-20"
             >
                 <div className="max-w-4xl mx-auto text-center">
@@ -203,7 +203,7 @@ export const About = () => {
                                 variants={listItemVariants}
                                 initial="hidden"
                                 whileInView="visible"
-                                viewport={{ once: false }}
+                                viewport={{ once: true }}
                                 className="p-6 bg-[#2d2d2d] rounded-xl shadow-lg hover:bg-[#3d3d3d] transition-colors duration-300"
                             >
                                 <span className="text-2xl">{item}</span>

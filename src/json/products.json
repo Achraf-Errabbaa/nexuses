@@ -3,90 +3,180 @@
         "id": 1,
         "category": "Gaming Computers",
         "name": "Nexus Ultra Gaming PC",
-        "description": "A high-performance gaming PC with RTX 4090, Intel i9-13900K, and 32GB RAM.",
+        "description": "Flagship gaming powerhouse with top-tier components",
         "price": 2999.99,
         "stock": 5,
-        "image": "pc1"
+        "image": "pc1",
+        "specs": {
+            "cpu": "Intel Core i9-13900K (5.8GHz, 24 cores)",
+            "gpu": "NVIDIA RTX 4090 24GB GDDR6X",
+            "ram": "32GB DDR5 6000MHz RGB",
+            "storage": "2TB NVMe Gen4 SSD + 4TB HDD",
+            "motherboard": "ASUS ROG Maximus Z790",
+            "psu": "1000W 80+ Platinum Modular",
+            "cooling": "360mm AIO Liquid Cooler",
+            "case": "Lian Li O11 Dynamic RGB"
+        }
     },
     {
         "id": 2,
         "category": "Gaming Computers",
         "name": "Nexus Elite Gaming PC",
-        "description": "Powerful gaming rig with RTX 4070, Ryzen 7 7800X3D, and 16GB RAM.",
+        "description": "High-performance gaming system with premium components",
         "price": 1899.99,
         "stock": 10,
-        "image": "pc2"
+        "image": "pc2",
+        "specs": {
+            "cpu": "AMD Ryzen 7 7800X3D (5.0GHz, 8 cores)",
+            "gpu": "NVIDIA RTX 4070 12GB GDDR6X",
+            "ram": "16GB DDR5 5600MHz",
+            "storage": "1TB NVMe Gen4 SSD",
+            "motherboard": "MSI MPG B650 Edge WiFi",
+            "psu": "750W 80+ Gold Modular",
+            "cooling": "240mm AIO Liquid Cooler",
+            "case": "NZXT H5 Flow"
+        }
     },
     {
         "id": 3,
         "category": "Gaming Computers",
         "name": "Nexus Starter Gaming PC",
-        "description": "A budget-friendly gaming PC with GTX 1660 Super and Ryzen 5 5600.",
+        "description": "Entry-level gaming system with solid performance",
         "price": 799.99,
         "stock": 15,
-        "image": "pc3"
+        "image": "pc3",
+        "specs": {
+            "cpu": "AMD Ryzen 5 5600 (4.4GHz, 6 cores)",
+            "gpu": "NVIDIA GTX 1660 Super 6GB",
+            "ram": "16GB DDR4 3200MHz",
+            "storage": "512GB NVMe SSD",
+            "motherboard": "Gigabyte A520M DS3H",
+            "psu": "500W 80+ Bronze",
+            "cooling": "Air Cooler",
+            "case": "Deepcool MATREXX 40"
+        }
     },
     {
         "id": 4,
         "category": "Gaming Laptops",
         "name": "Nexus Titan Gaming Laptop",
-        "description": "A premium gaming laptop with RTX 4070, Intel i9-13900HX, and 32GB RAM.",
+        "description": "Desktop-grade performance in a portable form factor",
         "price": 2499.99,
         "stock": 7,
-        "image": "laptop1"
+        "image": "laptop1",
+        "specs": {
+            "cpu": "Intel Core i9-13900HX (5.4GHz, 24 cores)",
+            "gpu": "NVIDIA RTX 4070 8GB GDDR6",
+            "ram": "32GB DDR5 5200MHz",
+            "storage": "1TB PCIe 4.0 SSD",
+            "display": "17.3\" 4K 144Hz IPS",
+            "battery": "99.9Wh Lithium-Polymer",
+            "ports": "Thunderbolt 4, HDMI 2.1, USB-C"
+        }
     },
     {
         "id": 5,
         "category": "Gaming Laptops",
         "name": "Nexus Stealth Gaming Laptop",
-        "description": "Slim and powerful with RTX 3070, Ryzen 9 6900HX, and 16GB RAM.",
+        "description": "Slim profile with powerful gaming capabilities",
         "price": 1799.99,
         "stock": 12,
-        "image": "laptop2"
+        "image": "laptop2",
+        "specs": {
+            "cpu": "AMD Ryzen 9 6900HX (4.9GHz, 8 cores)",
+            "gpu": "NVIDIA RTX 3070 8GB GDDR6",
+            "ram": "16GB DDR5 4800MHz",
+            "storage": "1TB PCIe 3.0 SSD",
+            "display": "15.6\" QHD 165Hz IPS",
+            "battery": "80Wh Lithium-Polymer",
+            "ports": "USB4, HDMI 2.0, USB-C"
+        }
     },
     {
         "id": 6,
         "category": "Gaming Laptops",
         "name": "Nexus Shadow Gaming Laptop",
-        "description": "A great mid-range gaming laptop with RTX 3060 and Intel i7-12700H.",
+        "description": "Balanced performance for mobile gaming",
         "price": 1299.99,
         "stock": 20,
-        "image": "laptop3"
+        "image": "laptop3",
+        "specs": {
+            "cpu": "Intel Core i7-12700H (4.7GHz, 14 cores)",
+            "gpu": "NVIDIA RTX 3060 6GB GDDR6",
+            "ram": "16GB DDR4 3200MHz",
+            "storage": "512GB PCIe 3.0 SSD",
+            "display": "15.6\" FHD 144Hz IPS",
+            "battery": "62Wh Lithium-Polymer",
+            "ports": "Thunderbolt 3, HDMI 2.0"
+        }
     },
     {
         "id": 7,
         "category": "Accessories",
         "name": "Nexus RGB Mechanical Keyboard",
-        "description": "A mechanical keyboard with customizable RGB lighting and fast switches.",
+        "description": "Premium gaming keyboard with customizable lighting",
         "price": 129.99,
         "stock": 25,
-        "image": "keyboard"
+        "image": "keyboard",
+        "specs": {
+            "type": "Mechanical",
+            "switches": "NX Red Linear",
+            "backlight": "Per-key RGB",
+            "connectivity": "USB 2.0 Type-C",
+            "features": "N-key rollover, media controls",
+            "construction": "Aluminum frame"
+        }
     },
     {
         "id": 8,
         "category": "Accessories",
         "name": "Nexus Pro Gaming Mouse",
-        "description": "Ultra-lightweight gaming mouse with adjustable DPI and ergonomic design.",
+        "description": "Competitive-grade gaming mouse",
         "price": 69.99,
         "stock": 30,
-        "image": "mouse"
+        "image": "mouse",
+        "specs": {
+            "sensor": "PixArt PAW 3395",
+            "dpi": "100-26,000",
+            "buttons": "8 programmable",
+            "weight": "68g (ultralight)",
+            "connectivity": "Wired USB",
+            "features": "PTFE skates, paracord cable"
+        }
     },
     {
         "id": 9,
-        "category": "Monitor",
+        "category": "Monitors",
         "name": "Nexus 4K Gaming Monitor",
-        "description": "27-inch 4K gaming monitor with a 144Hz refresh rate and G-Sync.",
+        "description": "Immersive gaming display with stunning clarity",
         "price": 499.99,
         "stock": 15,
-        "image": "monitor"
+        "image": "monitor",
+        "specs": {
+            "size": "27\"",
+            "resolution": "3840x2160 (4K UHD)",
+            "refresh_rate": "144Hz",
+            "response_time": "1ms GTG",
+            "panel": "IPS",
+            "features": "G-Sync Compatible, HDR600",
+            "ports": "DisplayPort 1.4, HDMI 2.1"
+        }
     },
     {
         "id": 10,
         "category": "Accessories",
         "name": "Nexus Wireless Headset",
-        "description": "Surround sound gaming headset with noise cancellation and wireless connectivity.",
+        "description": "Immersive spatial audio experience",
         "price": 149.99,
         "stock": 20,
-        "image": "headset"
+        "image": "headset",
+        "specs": {
+            "drivers": "50mm Neodymium",
+            "connectivity": "2.4GHz Wireless + Bluetooth",
+            "battery": "30-hour runtime",
+            "microphone": "Retractable boom mic",
+            "features": "Dolby Atmos, RGB lighting",
+            "weight": "320g"
+        }
     }
 ]
