@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="boltGrad3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00E6FF"></stop>
+      <stop offset="1" stop-color="#7C4DFF"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- bolt bigger -->
+  <path d="M100 260 L180 40 L150 160 L270 120 L190 360 L220 180 Z" fill="url(#boltGrad3)" stroke="black" stroke-width="8" stroke-linejoin="round"></path>
+</svg>
